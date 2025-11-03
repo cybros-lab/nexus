@@ -1,0 +1,28 @@
+{
+  "ignored_warnings": [
+    {
+      "warning_type": "File Access",
+      "warning_code": 16,
+      "fingerprint": "0e40bd0ca6a68f0d844f05431f6b3572fffd9a48b750f1fa9e10addc34171547",
+      "check_name": "FileAccess",
+      "message": "Parameter value used in file name",
+      "file": "app/controllers/api/file_system_controller.rb",
+      "line": 27,
+      "link": "https://brakemanscanner.org/docs/warning_types/file_access/",
+      "code": "Dir.glob(\"#{Utils::FileSystem.root_path.join(params[:requested_path].to_s)}/*\")",
+      "render_path": null,
+      "location": {
+        "type": "method",
+        "class": "Api::FileSystemController",
+        "method": "index"
+      },
+      "user_input": "params[:requested_path].to_s",
+      "confidence": "Weak",
+      "cwe_id": [
+        22
+      ],
+      "note": ""
+    }
+  ],
+  "brakeman_version": "7.1.0"
+}

@@ -38,6 +38,12 @@ gem "thruster", require: false
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin Ajax possible
 gem "rack-cors"
 
+# Simple Dashboard for Active Job
+gem "mission_control-jobs"
+
+# Manage environment specific settings
+gem "config"
+
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[mri windows], require: "debug/prelude"
@@ -62,3 +68,16 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
 end
+
+# Watch for file-system changes
+gem "listen", require: false
+
+# .gitignore rules compatible implementation for fast ignoring unwilling files
+# Original: https://github.com/robotdana/fast_ignore/tree/dev
+gem "path_list", path: "vendor/gems/path_list"
+
+# For digesting CRC for observing files
+gem "digest-crc"
+
+# Detect file type
+gem "marcel"
